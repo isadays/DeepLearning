@@ -57,3 +57,22 @@ test <-MNIST$testX
 
 modStack <- StackRBM(x=train, layers = c(100,100,100), n.iter=1000,size.minibatch = 10)
 ReconstructRBM(test = test[5,], model=modStack, layers=3)
+
+
+#another example 
+
+
+image(matrix(MNIST$trainX[102,],nrow=28))
+
+set.seed(0)
+train <- MNIST$trainX
+TrainY <- MNIST$trainY
+
+modelClassRBM <- RBM(x=train, y=TrainY, n.iter=1000, n.hidden = 100, size.minibatch = 10)
+
+set.seed(0)
+test <- MNIST$testX
+TestY <- MNIST$testY
+p <- PredictRBM(test = test, labels = TestY, model=modelClassRBM)
+
+p
