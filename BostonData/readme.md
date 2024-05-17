@@ -1,2 +1,3 @@
-Exploring neural net library 
-Dataset: Boston
+Este script R utiliza uma Árvore de Regressão e uma Rede Neural para prever o valor mediano das residências no conjunto de dados Boston da biblioteca MASS. As bibliotecas principais utilizadas incluem MASS, neuralnet, ISLR, mlbench e rpart. O script carrega os dados, realiza a divisão em conjuntos de treino e teste, e escala os dados para normalização.
+
+A árvore de regressão é treinada utilizando o método anova, e a média do erro quadrático (MSE) é calculada para avaliar o desempenho do modelo. Em seguida, uma rede neural com arquitetura oculta de camadas (5, 4, 3, 2 neurônios) é treinada para prever o valor das residências. O desempenho da rede neural é avaliado calculando o MSE, e os resultados previstos são comparados com os valores reais utilizando gráficos, demonstrando a eficácia da modelagem.
